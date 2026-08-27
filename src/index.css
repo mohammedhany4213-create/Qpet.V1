@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Poppins', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fredoka', 'Poppins', system-ui, sans-serif;
+  }
+
+  [dir="rtl"] body,
+  [dir="rtl"] {
+    font-family: 'Cairo', 'Poppins', system-ui, sans-serif;
+  }
+
+  [dir="rtl"] h1,
+  [dir="rtl"] h2,
+  [dir="rtl"] h3,
+  [dir="rtl"] h4,
+  [dir="rtl"] h5,
+  [dir="rtl"] h6 {
+    font-family: 'Cairo', 'Fredoka', 'Poppins', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-primary-500 px-6 py-3 font-display font-semibold text-white shadow-lg shadow-primary-500/30 transition-all hover:bg-primary-600 hover:shadow-xl hover:shadow-primary-500/40 active:scale-95 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-ocean-500 px-6 py-3 font-display font-semibold text-white shadow-lg shadow-ocean-500/30 transition-all hover:bg-ocean-600 hover:shadow-xl hover:shadow-ocean-500/40 active:scale-95 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-accent-400 px-6 py-3 font-display font-semibold text-accent-900 shadow-lg shadow-accent-400/30 transition-all hover:bg-accent-500 hover:shadow-xl hover:shadow-accent-400/40 active:scale-95 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-white/80 px-6 py-3 font-display font-semibold text-gray-700 shadow-sm backdrop-blur transition-all hover:bg-white hover:shadow-md active:scale-95;
+  }
+
+  .input-field {
+    @apply w-full rounded-2xl border-2 border-gray-200 bg-white px-4 py-3 font-body text-gray-800 placeholder:text-gray-400 transition-all focus:border-primary-400 focus:outline-none focus:ring-4 focus:ring-primary-100;
+  }
+
+  .input-field.error {
+    @apply border-error-400 focus:border-error-400 focus:ring-error-100;
+  }
+
+  .label-text {
+    @apply mb-1.5 block font-display text-sm font-semibold text-gray-700;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #FFC1D2;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF9BB4;
+}
+
+/* Blob shape helpers */
+.blob {
+  border-radius: 42% 58% 63% 37% / 41% 44% 56% 59%;
+}
+.blob-2 {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+.blob-3 {
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
